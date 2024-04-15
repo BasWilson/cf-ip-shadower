@@ -23,9 +23,9 @@ FROM alpine:latest
 WORKDIR /app
 
 # Copy the built executable from the builder stage to the /app directory in the final stage
-COPY --from=builder /app/bin/twinner .
+COPY --from=builder /app/bin/shadow .
 
 EXPOSE 1338
 
 # Command to run the executable
-CMD ["./twinner"]
+CMD ["./shadow"]
